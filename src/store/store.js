@@ -15,7 +15,6 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 const middlewares = [
   process.env.NODE_ENV !== "production" && logger,
   thunk,
-  git,
 ].filter(Boolean);
 
 const composeEnhancers =
