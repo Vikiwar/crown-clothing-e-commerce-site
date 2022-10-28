@@ -1,3 +1,5 @@
 export const CATEGORIES_ACTION_TYPES = {
-  SET_CATEGORIES: "category/set_categories",
+  FETCH_CATEGORIES_START: "category/FETCH_CATEGORIES_START",
+  FETCH_CATEGORIES_success: "category/FETCH_CATEGORIES_success",
+  FETCH_CATEGORIES_failed: "category/FETCH_CATEGORIES_failed",
 };

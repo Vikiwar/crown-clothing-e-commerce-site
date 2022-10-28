@@ -6,15 +6,12 @@ import "./shop.styles.scss";
 import { getCategoriesAndDocuments } from "../../utlis/firebase/firebase.utlis";
 import { setCategories } from "../../store/categories/category.action";
 import { useDispatch } from "react-redux";
+import { fetchCategoriesAsync } from "../../store/categories/category.action";
+
 const Shop = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    const getCategoriesMap = async () => {
-      const categories = await getCategoriesAndDocuments();
-
-      dispatch(setCategories(categories));
-    };
-    getCategoriesMap();
+    dispatch(fetchCategoriesAsync());
   }, []);
 
   return (
